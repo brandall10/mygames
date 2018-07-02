@@ -8,6 +8,11 @@ class Api::GameLibrary
     response.body
   end
 
+  def get_categories
+    response = conn.get('categories')
+    response.body
+  end
+
   private
   def conn
     @conn ||= Faraday.new(url: BASE_URL) do |faraday|
