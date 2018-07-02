@@ -1,6 +1,6 @@
 class Api::GameLibrary
-  API_VERSION = 1
-  HOST = 'http://gamelibrary.com:3000'
+  API_VERSION = Rails.application.secrets.game_library[:api_version]
+  HOST = Rails.application.secrets.game_library[:host] 
   BASE_URL = "#{HOST}/v#{API_VERSION}"
 
   def get_games
