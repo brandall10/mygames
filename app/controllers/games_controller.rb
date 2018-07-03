@@ -1,9 +1,9 @@
 class GamesController < ApplicationController
   def index
-    response = gl_api.get_categories
+    response = gl_api.get_games(search_tag: params[:search_tag])
 
     if response.status == 200
-      @categories = response.body
+      @games = response.body
     else
       redirect_to redirect_url, notice: 'Can not view games'
     end

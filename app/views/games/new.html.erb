@@ -2,4 +2,4 @@
 
 <%= render 'form', game: @game %>
 
-<%= link_to 'Back', category_path(params[:category_id]) %>
+<%= link_to 'Back', category_path(params.try(:[], :category_id)) %>

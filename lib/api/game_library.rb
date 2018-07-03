@@ -3,8 +3,8 @@ class Api::GameLibrary
   HOST = Rails.application.secrets.game_library[:host] 
   BASE_URL = "#{HOST}/v#{API_VERSION}"
 
-  def get_games
-    conn.get('games')
+  def get_games(search_tag: '')
+    conn.get('games', search_tag: search_tag)
   end
 
   def get_categories
