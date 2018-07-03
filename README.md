@@ -7,7 +7,7 @@ This is a continuation of documentation from [the api portion](https://github.co
 Regarding the other portions:
 - Functionaly speaking, #2 and #3 are complete.  
 - #4 is working for the search term only, did not spend time on the category selection.  
-- #5 was attempted but it doesn't appear the CSV output is zipped properly.  A zip file is downloaded though.  There are several test csv files in this repo that inadventently were checked-in, sorry!
+- #5 was attempted but it doesn't appear the CSV output is zipped properly.  A zip file is downloaded though.  There are several test csv files in this repo that inadventently were checked-in, sorry! (I should have used Tempfile here as well)
 - While tests are mostly addressed for the API, I did not get around to writing tests for the front-end app.  My general approach for testing APIs is to create mocks or use VCR to generate HTTP fixtures from live requests, I would have likely done the latter here. 
 - I mostly reused erb templates from the API.  The instructions appeared to focus on functionality, so I elected to skip making it nicer than this.  Time permitting I would have liked to improve styling and layout
 
