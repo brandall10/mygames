@@ -39,6 +39,7 @@ class CategoriesController < ApplicationController
     end
   end
 
+  require 'CSV'
   def download
     show
 
