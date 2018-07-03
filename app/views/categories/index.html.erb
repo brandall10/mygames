@@ -22,6 +22,7 @@
         <td><%= category['name'] %></td>
         <td><%= link_to 'Show', category_path(id: category['id']) %></td>
         <td><%= link_to 'Destroy', category_path(id: category['id']), method: :delete %></td>
+        <td><%= link_to 'Download', download_category_path(id: category['id']) %></td>
       </tr>
     <% end %>
   </tbody>
