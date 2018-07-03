@@ -1,0 +1,6 @@
+<h1>Editing Game</h1>
+
+<%= render 'form' %>
+
+<td><%= link_to 'Show', game_path(id: @game['id']) %></td>
+<%= link_to 'Back', category_path(@game['category_id']) %>

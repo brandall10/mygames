@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @game['category_name'] %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @game['title'] %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @game['description'] %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @game['author'] %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @game['status'] %>
+</p>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', category_path(@game['category_id']) %>
