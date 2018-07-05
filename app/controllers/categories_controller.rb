@@ -42,23 +42,23 @@ class CategoriesController < ApplicationController
   require 'CSV'
   def download
     show
-
+    
     csv_file = "#{@category["name"]}.csv"
     zip_file = "#{@category["name"]}.zip"
 
-    s = CSV.generate do |csv|
+    csv_buf = CSV.generate do |csv|
       csv << @category['games'][0].keys
       @category['games'].each do |hsh| 
         csv << hsh.values 
       end
     end
 
-    zip = Zip::File.open(zip_file, Zip::File::CREATE) do |zip|
-      zip.get_output_stream(csv_file) do |os|
-        os.write(s)
-      end
+    zip_buf = Zip::OutputStream.write_buffer do |os| 
+      os.put_next_entry csv_file
+      os.print csv_buf
     end
+    zip_buf.rewind
 
-    send_data zip, filename: zip_file, type: 'application/zip'
+    send_data zip_buf.read, filename: zip_file, type: 'application/zip'
   end
 end

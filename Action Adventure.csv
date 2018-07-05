@@ -1,9 +1,0 @@
-id,category_id,title,description,author,status,created_at,updated_at,category_name,url
-3,1,The Last of Us,,,,2018-07-03T03:01:13.000Z,2018-07-03T03:01:13.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/3.json
-4,1,Grand Theft Auto V,,,,2018-07-03T03:01:13.000Z,2018-07-03T03:01:13.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/4.json
-14,1,Batman: Arkham City,,,,2018-07-03T03:01:13.000Z,2018-07-03T03:01:13.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/14.json
-18,1,Red Dead Redemption,,,,2018-07-03T03:01:13.000Z,2018-07-03T03:01:13.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/18.json
-21,1,Uncharted 2: Among Thieves,sdf,"",,2018-07-03T03:01:13.000Z,2018-07-03T04:49:21.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/21.json
-23,1,The Last of Us,Blah,Me,0,2018-07-03T04:00:14.000Z,2018-07-03T04:00:14.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/23.json
-25,1,The Last of Us,sdf,sdf,1,2018-07-03T04:12:41.000Z,2018-07-03T04:50:17.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/25.json
-27,1,sdfd,df,sdf,,2018-07-03T04:43:59.000Z,2018-07-03T04:43:59.000Z,Action Adventure,http://gamelibrary.com:3000/v1/games/27.json
