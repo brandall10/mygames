@@ -44,6 +44,13 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  # Use rspec for unit/integration tests
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  # Use vcr to create fixtures from live http requests
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
