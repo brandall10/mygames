@@ -1,12 +1,10 @@
 <%= form_tag '/games', method: :get do %>
   <%= label_tag :search_tag, 'Search Games' %>
-  <%= text_field_tag :search_tag %>
+  <%= search_field_tag :search_tag %>
   <%= submit_tag 'Search' %>
 <% end %>
 
 <h1>Categories</h1>
-
-<p id="notice"><%= notice %></p>
 
 <table>
   <thead>

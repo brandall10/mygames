@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <%= form_tag("/games/#{@game.try(:[], 'id')}", method: (@game ? :put: :post)) do %>
   <div class="field">
     <%= label_tag :category_id, 'Category Id:' %>

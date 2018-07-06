@@ -21,12 +21,12 @@ class CategoriesController < ApplicationController
           if @category['games'].present?
             send_data download_zip_stream.read, filename: "#{@category['name']}.zip"
           else
-            redirect_to categories_url, notice: 'Category is empty'
+            redirect_to categories_url, alert: 'Category is empty'
           end
         end
       end
     else
-      redirect_to categories_url, notice: 'Category not found'
+      redirect_to categories_url, alert: 'Category not found'
     end
   end
 
@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
     if response.status == 201
       redirect_to categories_url, notice: 'Category was successfully created'
     else
-      redirect_to categories_url, notice: 'There was an error creating the category'
+      redirect_to categories_url, alert: 'There was an error creating the category'
     end
   end
 
@@ -46,7 +46,7 @@ class CategoriesController < ApplicationController
     if response.status == 204
       redirect_to categories_url, notice: 'Category was successfully destroyed.'
     else
-      redirect_to categories_url, notice: response.body.join(', ')
+      redirect_to categories_url, alert: response.body.join(', ')
     end
   end
 

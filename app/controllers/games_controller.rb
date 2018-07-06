@@ -5,7 +5,7 @@ class GamesController < ApplicationController
     if response.status == 200
       @games = response.body
     else
-      redirect_to redirect_url, notice: 'Can not view games'
+      redirect_to redirect_url, alert: 'Can not view games'
     end
   end
 
@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     if response.status == 200
       @game = response.body
     else
-      redirect_to redirect_url, notice: 'Game not found'
+      redirect_to redirect_url, alert: 'Game not found'
     end
   end
 
@@ -25,7 +25,7 @@ class GamesController < ApplicationController
     if response.status == 200
       @game = response.body
     else
-      redirect_to redirect_url, notice: 'Game not found'
+      redirect_to redirect_url, alert: 'Game not found'
     end
   end
 
@@ -42,7 +42,7 @@ class GamesController < ApplicationController
     if response.status == 201
       redirect_to redirect_url, notice: 'Game was successfully created'
     else
-      redirect_to redirect_url, notice: response.body.join(', ')
+      redirect_to redirect_url, alert: response.body.join(', ')
     end
   end
 
@@ -59,7 +59,7 @@ class GamesController < ApplicationController
     if response.status == 200
       redirect_to redirect_url, notice: 'Game was successfully updated'
     else
-      redirect_to redirect_url, notice: response.body.join(', ')
+      redirect_to redirect_url, alert: response.body.join(', ')
     end
   end
 
@@ -69,7 +69,7 @@ class GamesController < ApplicationController
     if response.status == 204
       redirect_to redirect_url, notice: 'Game was successfully destroyed.'
     else
-      redirect_to redirect_url, notice: response.body.join(', ')
+      redirect_to redirect_url, alert: response.body.join(', ')
     end
   end
 
