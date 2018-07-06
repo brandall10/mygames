@@ -12,7 +12,7 @@
 
   <tbody>
     <% @category['games'].each do |game| %>
-      <tr>
+      <tr class='game'>
         <td><%= game['title'] %></td>
         <td><%= link_to 'Show', game_path(id: game['id']) %></td>
         <td><%= link_to 'Edit', edit_game_path(id: game['id']) %></td>

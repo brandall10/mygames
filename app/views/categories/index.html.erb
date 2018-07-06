@@ -16,9 +16,9 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="categories">
     <% @categories.each do |category| %>
-      <tr>
+      <tr class="category">
         <td><%= category['name'] %></td>
         <td><%= link_to 'Show', category_path(id: category['id']) %></td>
         <td><%= link_to 'Destroy', category_path(id: category['id']), method: :delete %></td>
