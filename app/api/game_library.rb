@@ -23,7 +23,7 @@ class GameLibrary
     conn.post('categories', name: name)
   end
 
-  def add_game(category_id:, title:, description:nil, author:nil, status:nil)
+  def add_game(category_id:nil, title:, description:nil, author:nil, status:nil)
     game_params = {
       category_id: category_id, 
       title: title, 

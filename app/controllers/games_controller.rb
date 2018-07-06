@@ -30,13 +30,6 @@ class GamesController < ApplicationController
   end
 
   def create
-    game_params = {
-      category_id: params[:category_id],
-      title: params[:title],
-      description: params[:description],
-      author: params[:author],
-      status: params[:status]
-    }
     response = gl_api.add_game(game_params)
 
     if response.status == 201
@@ -47,13 +40,6 @@ class GamesController < ApplicationController
   end
 
   def update 
-    game_params = {
-      category_id: params[:category_id],
-      title: params[:title],
-      description: params[:description],
-      author: params[:author],
-      status: params[:status]
-    }
     response = gl_api.update_game(params[:id], game_params)
 
     if response.status == 200
@@ -74,6 +60,10 @@ class GamesController < ApplicationController
   end
 
   private
+  def game_params
+    params.permit(:category_id, :title, :description, :author, :status).to_h.symbolize_keys
+  end
+
   def redirect_url
     params[:category_id] ? category_url(id: params[:category_id]) : root_url
   end

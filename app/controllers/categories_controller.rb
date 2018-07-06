@@ -53,6 +53,10 @@ class CategoriesController < ApplicationController
   private
   include DownloadsConcern
 
+  def categories_params
+    params.permit(:name).to_h.symbolize_keys
+  end
+
   def download_zip_stream
     @zip_stream ||= begin
       csv_filename = "#{@category['name']}.csv"
