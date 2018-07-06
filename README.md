@@ -14,6 +14,8 @@ Other notes:
 - I mostly reused erb templates from the API.  The instructions appeared to focus on functionality, so I elected to skip making it nicer than this.
 - Forms are using tag builders as there is no ORM present, the controllers interface directly with the client-side GameLibrary API.  One could elect to use ActiveModel to wrap the API calls and use object based form builders.   
 
+Lastly, my commits that go to master are never this scattered/messy.  I always squash commits in the scope of a PR branch with an eye on things that could be atomically revertable.  Same with migrations, I always ensure revertability.
+
 ## Task Instructions
 
 ### For validating the application
