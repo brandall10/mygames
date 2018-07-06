@@ -23,6 +23,8 @@
         <td><%= game['author'] %></td>
         <td><%= game['status'] %></td>
         <td><%= link_to 'Show', game_path(id: game['id']) %></td>
+        <td><%= link_to 'Edit', edit_game_path(id: game['id']) %></td>
+        <td><%= link_to 'Destroy', game_path(id: game['id']), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
