@@ -507,4 +507,46 @@ http_interactions:
       string: '{"category":["must exist"]}'
     http_version: 
   recorded_at: Fri, 06 Jul 2018 21:39:25 GMT
+- request:
+    method: get
+    uri: http://gamelibrary.com:3000/v1/games?category_id=1&search_tag=the
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"da44aaace59e31700601aa242234d188"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d0639293-fb21-4fd5-a4a2-8d1b6aba68af
+      X-Runtime:
+      - '0.292918'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"id":4,"category_id":1,"title":"Grand Theft Auto V","description":null,"author":null,"status":null,"created_at":"2018-07-06T19:16:12.000Z","updated_at":"2018-07-06T19:16:12.000Z","category_name":"Action
+        Adventure","url":"http://gamelibrary.com:3000/v1/games/4.json"}]'
+    http_version: 
+  recorded_at: Fri, 06 Jul 2018 22:54:34 GMT
 recorded_with: VCR 4.0.0

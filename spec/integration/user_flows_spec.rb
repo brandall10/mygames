@@ -16,6 +16,14 @@ RSpec.describe 'user flows', type: :request do
     expect(page).to have_selector('.game', count: 5)
   end
 
+  it 'searches for games under a category' do
+    page.fill_in 'Search Games', with: 'the'
+    page.select 'Action Adventure', from: 'category_id'
+    page.click_on 'Search'
+
+    expect(page).to have_selector('.game', count: 1)
+  end
+
   it 'shows category' do
     within first('.category') do
       click_link 'Show'

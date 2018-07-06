@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    response = gl_api.get_games(search_tag: params[:search_tag])
+    response = gl_api.get_games(search_tag: params[:search_tag], category_id: params[:category_id])
 
     if response.status == 200
       @games = response.body

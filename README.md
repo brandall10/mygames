@@ -6,7 +6,7 @@ This is a continuation of documentation from [the api portion](https://github.co
 
 Regarding the other portions:
 - General site functionality (#2 and #3) are complete per the spec.  
-- #4 is working for the search term only, did not spend time on the category selection.  
+- #4 is working per spec, with both search term and category applied 
 - #5, the download of categories, works well. It is worth noting that I was able to get this to work without hitting the filesystem on the server. 
 
 Other notes:

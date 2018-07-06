@@ -1,0 +1,7 @@
+<%= form_tag '/games', method: :get do %>
+  <%= label_tag :search_tag, 'Search Games' %>
+  <%= search_field_tag :search_tag %>
+  <%= select_tag :category_id, options_for_select([['All',0]].concat(@categories.pluck('name', 'id'))) %>  
+  <%= submit_tag 'Search' %>
+<% end %>
+
